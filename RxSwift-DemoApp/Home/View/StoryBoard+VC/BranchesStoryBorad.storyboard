@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Branches-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="Branches" id="Y6W-OH-hqX" customClass="Branches" customModule="RxSwift_DemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zb0-vJ-xOx" userLabel="EMptyBranchesView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There is no branches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1JG-Kz-jrd">
+                                        <rect key="frame" x="73" y="391" width="268.5" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstItem="1JG-Kz-jrd" firstAttribute="centerY" secondItem="zb0-vJ-xOx" secondAttribute="centerY" id="EK6-24-aCc"/>
+                                    <constraint firstItem="1JG-Kz-jrd" firstAttribute="centerX" secondItem="zb0-vJ-xOx" secondAttribute="centerX" id="fOf-FL-VvP"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vqx-aR-E1R" userLabel="BranchesView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1bf-tR-GnN" userLabel="branchesTableView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="1bf-tR-GnN" firstAttribute="top" secondItem="Vqx-aR-E1R" secondAttribute="top" id="0sf-fh-7Sk"/>
+                                    <constraint firstAttribute="bottom" secondItem="1bf-tR-GnN" secondAttribute="bottom" id="5ME-Ty-Sgn"/>
+                                    <constraint firstItem="1bf-tR-GnN" firstAttribute="leading" secondItem="Vqx-aR-E1R" secondAttribute="leading" id="CZP-XH-hlV"/>
+                                    <constraint firstAttribute="trailing" secondItem="1bf-tR-GnN" secondAttribute="trailing" id="nRr-mC-b44"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vqx-aR-E1R" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="9bn-Ae-jiY"/>
+                            <constraint firstItem="Vqx-aR-E1R" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="RbJ-c7-c7E"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Vqx-aR-E1R" secondAttribute="trailing" id="TnB-uq-hu7"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zb0-vJ-xOx" secondAttribute="trailing" id="ZjL-Vf-eaq"/>
+                            <constraint firstItem="zb0-vJ-xOx" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="a6f-co-JEO"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="zb0-vJ-xOx" secondAttribute="bottom" id="dCg-x1-hIp"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Vqx-aR-E1R" secondAttribute="bottom" id="q6h-d8-jSK"/>
+                            <constraint firstItem="zb0-vJ-xOx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="roi-db-qMv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="branchView" destination="Vqx-aR-E1R" id="bbU-B9-ixs"/>
+                        <outlet property="branchesTableView" destination="1bf-tR-GnN" id="5jb-W2-zIe"/>
+                        <outlet property="emptyBranchView" destination="zb0-vJ-xOx" id="STQ-zN-dai"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="43" y="99"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
